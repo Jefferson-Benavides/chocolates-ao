@@ -19,6 +19,7 @@ body {
     color: white;
     font-weight: bold;
     letter-spacing: 2px;
+    margin: 50px;
 }
 
 
@@ -26,7 +27,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 0;
+    /* z-index: 0; */
 }
 
 

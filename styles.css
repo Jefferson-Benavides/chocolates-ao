@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Cursive', cursive; 
+    background-color: #ffcccc; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +11,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -50,4 +50,31 @@ button {
 #message {
     font-size: 18px;
     margin: 10px 0;
+}
+
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#propuesta {
+    position: relative;
+    animation: fadeInOut 2s ease-in-out; 
+}
+
+#background-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fadeInOut 4s ease-in-out; 
 }

@@ -4,6 +4,7 @@ body {
     font-family: 'Cursive', cursive; 
     background-color: #ffcccc; 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -11,10 +12,36 @@ body {
 
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: #ff5656; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+
+
+/* Animación para aparecer y desaparecer */
+@keyframes appearDisappear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 h1 {
@@ -32,6 +59,23 @@ button {
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
+    background-color: #ff5656;
+    border-radius: 24px;
+    border: 3px solid #ff7979;
+    color: aqua;
+    letter-spacing: 2px;
+}
+
+#yesButton{
+font-weight: bold;
+background-color: #fd3737;
+}
+
+#noButton{
+    color: #ff0000;
+}
+#noButton:disabled{
+    color: #ff9999;
 }
 
 .lives-bar {
@@ -51,7 +95,6 @@ button {
     font-size: 18px;
     margin: 10px 0;
 }
-
 
 @keyframes fadeInOut {
     0% {

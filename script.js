@@ -3,6 +3,7 @@ const propuestaText = document.getElementById('propuestaText');
 const backgroundImg = document.getElementById('background-img');
 const yesButton = document.getElementById('yesButton');
 const noButton = document.getElementById('noButton');
+const cancion = document.getElementById('cancion');
 
 let contraRespuestas = [
     "Andrea ¿Quieres darme una oportunidad?",
@@ -12,7 +13,7 @@ let contraRespuestas = [
     "Si te salgo un 'desgraciado', ya estás acostumbrada. \n \n Pero yo quiero sorprenderte",
     "Un ser así como tú, Andrea, es difícil encontrar, por eso quiero aprovechar la oportunidad",
     "Yo sé que no soy el hombre perfecto, pero sé que juntos vamos a disfrutar mucho",
-    "Dale Andrea, que si no tienes palabras, me puedes dar una respuesta en mis labios", 
+    "Dale Andrea, que si no tienes palabras, me puedes decir una respuesta en mis labios", 
     "Si tu lo prefieres, puede ser a escondidas"
 ]
 let currentIndex = 0;
@@ -47,6 +48,11 @@ yesButton.addEventListener('click', () => {
 noButton.addEventListener('click', () => {
     if (!isNoButtonDisabled) {
         currentIndex = (currentIndex + 1) % contraRespuestas.length;
+        if (currentIndex == 8){
+            cancion.style.display = 'block';
+        } else{
+            cancion.style.display = 'none';
+        }
         showPropuesta(currentIndex);
         changeBackground(currentIndex);
         disableNoButtonForProportionalTime();
@@ -56,3 +62,5 @@ noButton.addEventListener('click', () => {
 
 showPropuesta(currentIndex);
 changeBackground(currentIndex);
+
+

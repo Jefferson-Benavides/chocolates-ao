@@ -42,7 +42,7 @@ function disableNoButtonForProportionalTime() {
 
 
 yesButton.addEventListener('click', () => {
-    window.location.href = 'tu_url_externo.com';
+    window.location.href = 'https://api.whatsapp.com/send?phone=573205214311';
 });
 
 noButton.addEventListener('click', () => {
